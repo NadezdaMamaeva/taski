@@ -1,9 +1,9 @@
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
 from pathlib import Path
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
 sentry_sdk.init(
-        # В этой переменной будет значение для вашего проекта.
     dsn='https://673b0266b04b46dead8c63d5fed2dcd7@o4505199236874240.ingest.sentry.io/4505199257845760',
     integrations=[
         DjangoIntegration(),
@@ -126,6 +126,4 @@ STATIC_ROOT = BASE_DIR / 'static_backend'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
-]
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
